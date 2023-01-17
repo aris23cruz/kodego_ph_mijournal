@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginsignup"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etEmailSignup"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="48dp"
+        android:background="#EBECF0"
+        android:backgroundTint="#EBECF0"
+        android:ems="10"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:textColor="#CDDC39"
+        android:textColorHint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#BDC23C"
+        android:shadowColor="#BDC23C"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordSignup"
+        app:strokeColor="#000000" />
+
+    <EditText
+        android:id="@+id/etPasswordLogin"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:background="#EBECF0"
+        android:backgroundTint="#EBECF0"
+        android:ems="10"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:textColor="#CDDC39"
+        android:textColorHint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailLogin"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etPasswordSignup"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:background="#EBECF0"
+        android:backgroundTint="#EBECF0"
+        android:ems="10"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:textColor="#CDDC39"
+        android:textColorHint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailSignup"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#BDC23C"
+        android:shadowColor="#BDC23C"
+        android:text="LOG-IN"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLogin"
+        app:strokeColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="NOT YET REGISTER?"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/etEmailSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/etEmailLogin"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="212dp"
+        android:background="#EBECF0"
+        android:backgroundTint="#EBECF0"
+        android:ems="10"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:textColor="#CDDC39"
+        android:textColorHint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/googleicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignup"
+        app:layout_constraintVertical_bias="0.589"
+        app:srcCompat="@drawable/google" />
+
+    <ImageButton
+        android:id="@+id/btnFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/facebookicon"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGoogle"
+        app:layout_constraintTop_toTopOf="@+id/btnGoogle"
+        app:srcCompat="@drawable/facebook" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Sign up with"
+        android:textColor="#4CAF50"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGoogle"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoogle"
+        app:layout_constraintTop_toTopOf="@+id/btnGoogle"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
