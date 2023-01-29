@@ -18,7 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-const val REQUEST_CODE_SIGN_IN = 0
+//const val REQUEST_CODE_SIGN_IN = 0
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private lateinit var auth : FirebaseAuth
@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().apply{
             replace(binding.frameLayout.id, login)
             commit()
-
         }
 
         binding.btnFragLogin.setOnClickListener(){
@@ -51,7 +50,6 @@ class MainActivity : AppCompatActivity() {
                 replace(binding.frameLayout.id, login)
                 commit()
             }
-
         }
         binding.btnFragSignup.setOnClickListener(){
             supportFragmentManager.beginTransaction().apply{
@@ -66,7 +64,6 @@ class MainActivity : AppCompatActivity() {
         
         signUpBinding.btnSignup.setOnClickListener(){
             signupUser()
-
         }
         
         signUpBinding.btnGoogleIcon.setOnClickListener(){
@@ -78,11 +75,10 @@ class MainActivity : AppCompatActivity() {
             signInClient.signInIntent.also {
                 startActivityForResult(it, REQUEST_CODE_SIGN_IN)
             }
-
         }
-
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == REQUEST_CODE_SIGN_IN) {
@@ -107,7 +103,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
     private fun signupUser() {
         val email = signUpBinding.etEmailSignup.text.toString()
@@ -134,9 +129,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity,"You are not logged in", Toast.LENGTH_LONG).show()
         }else{
             Toast.makeText(this@MainActivity,"You are logged in", Toast.LENGTH_LONG).show()
-
         }
-
     }
 
     private fun loginUser(){
@@ -149,7 +142,6 @@ class MainActivity : AppCompatActivity() {
                     withContext(Dispatchers.Main){
                         checkLoggedInState()
                     }
-
                 }catch (e: Exception){
                     withContext(Dispatchers.Main){
                         Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_LONG).show()
@@ -157,7 +149,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     override fun onStart() {

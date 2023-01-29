@@ -10,6 +10,16 @@
     <string name="facebook_app_id">1234</string>
     <string name="fb_login_protocol_scheme">fb1234</string>
     <string name="facebook_client_token">56789</string>
+    <string name="notes" />
+    <string name="camera">Camera</string>
+    <string name="notification_bell">notification bell</string>
+    <string name="update">Update</string>
+    <string name="floatingactionbutton">FloatingActionButton</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="title_of_your_story">Title of your story</string>
+    <string name="enter_your_story">Enter your story</string>
+    <string name="date">Date</string>
 
 
 </resources>

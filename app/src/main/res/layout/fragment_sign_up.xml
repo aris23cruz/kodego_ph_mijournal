@@ -22,7 +22,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="Enter your email" />
 
     <EditText
         android:id="@+id/etPasswordSignup"
@@ -38,7 +39,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailSignup" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailSignup"
+        android:autofillHints="Enter your password" />
 
     <Button
         android:id="@+id/btnSignup"
@@ -56,23 +58,28 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="8dp"
         android:text="Sign up using:"
         android:textColor="#E91E63"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnGoogleIcon" />
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoogleIcon"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/btnGoogleIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="84dp"
         android:background="#00FFFFFF"
         android:src="@drawable/googleicon"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignup"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/googleicon" />
 
     <ImageButton
         android:id="@+id/btnFacebookIcon"
@@ -83,5 +90,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnGoogleIcon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnGoogleIcon"
-        app:layout_constraintTop_toTopOf="@+id/btnGoogleIcon" />
+        app:layout_constraintTop_toTopOf="@+id/btnGoogleIcon"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/facebookicon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
