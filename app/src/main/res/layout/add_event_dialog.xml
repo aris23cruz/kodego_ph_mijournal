@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/schedbg"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/etAddEventName"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_event_name_title"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddEventDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddSchedule"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/btnAddCalendarPicker"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:background="#8BC34A"
+        android:contentDescription="@string/calendar_picker"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAddSchedule"
+        app:layout_constraintEnd_toEndOf="@+id/etAddEventName"
+        app:layout_constraintTop_toTopOf="@+id/tvAddSchedule"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_edit_calendar_24" />
+
+    <TextView
+        android:id="@+id/tvAddSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:hint="Pick date and Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddEventName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

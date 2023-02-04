@@ -2,40 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
-    android:layout_height="300dp">
-
-    <EditText
-        android:id="@+id/etDialogDate"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/date"
-        android:inputType="textPersonName"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/etDialogStory"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDialogTitle" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/schedbg"
+    android:padding="10dp">
 
     <Button
         android:id="@+id/btnDialogUpdate"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
         android:backgroundTint="#4CAF50"
         android:text="@string/update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDialogStory"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintTop_toBottomOf="@+id/etDialogStory" />
 
     <EditText
         android:id="@+id/etDialogTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:ems="10"
@@ -44,23 +30,44 @@
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         app:layout_constraintBottom_toTopOf="@+id/etDialogDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/etDialogDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etDialogDate"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etDialogStory"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="28dp"
+        android:ellipsize="middle"
         android:ems="10"
+        android:gravity="top|start"
         android:hint="@string/enter_your_story"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
+        android:lines="5"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
+        android:scrollbars="vertical"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/btnDialogUpdate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnDialogUpdate"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/btnDialogUpdate"
         app:layout_constraintTop_toBottomOf="@+id/etDialogDate" />
+
+    <EditText
+        android:id="@+id/etDialogDate"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/etDialogStory"
+        app:layout_constraintStart_toStartOf="@+id/etDialogStory"
+        app:layout_constraintTop_toBottomOf="@+id/etDialogTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

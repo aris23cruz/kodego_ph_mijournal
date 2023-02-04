@@ -4,54 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@drawable/schedbg"
     android:padding="10dp">
 
     <EditText
         android:id="@+id/etAddTitle"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Enter your title"
+        android:hint="@string/enter_your_title"
         android:inputType="textPersonName"
         android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/etAddDate"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etAddStory"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:autofillHints=""
+        android:ellipsize="none"
         android:ems="10"
-        android:hint="Enter your story"
-        android:inputType="textPersonName"
+        android:gravity="top|start"
+        android:hint="@string/enter_your_story"
+        android:inputType="textMultiLine"
+        android:lines="5"
         android:paddingStart="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/etAddDate"
-        app:layout_constraintStart_toStartOf="@+id/etAddDate"
+        android:paddingEnd="5dp"
+        android:scrollbars="vertical"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddDiary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etAddDate" />
-
-    <EditText
-        android:id="@+id/etAddDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Date"
-        android:inputType="textPersonName"
-        android:paddingStart="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/etAddTitle"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/etAddTitle"
-        app:layout_constraintTop_toBottomOf="@+id/etAddTitle" />
 
     <Button
         android:id="@+id/btnAddDiary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="add"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etAddStory" />
+
+    <EditText
+        android:id="@+id/etAddDate"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/etAddStory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddTitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,43 +10,43 @@
 
     <Button
         android:id="@+id/btnFragSignup"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#BDC23C"
+        android:backgroundTint="#8BC34A"
         android:shadowColor="#BDC23C"
         android:text="SIGN UP"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFragLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnFragLogin"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnFragLogin"
         app:strokeColor="#000000" />
 
     <Button
         android:id="@+id/btnFragLogin"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="49dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#BDC23C"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#009688"
         android:shadowColor="#BDC23C"
         android:text="LOG-IN"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnFragSignup"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#000000" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnFragLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragLogin">
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
 

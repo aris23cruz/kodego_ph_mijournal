@@ -66,16 +66,16 @@ class MainActivity : AppCompatActivity() {
             signupUser()
         }
         
-        signUpBinding.btnGoogleIcon.setOnClickListener(){
-            val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.webclient_id))
-                .requestEmail()
-                .build()
-            val signInClient = GoogleSignIn.getClient(this, options)
-            signInClient.signInIntent.also {
-                startActivityForResult(it, REQUEST_CODE_SIGN_IN)
-            }
-        }
+//        signUpBinding.btnGoogleIcon.setOnClickListener(){
+//            val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestIdToken(getString(R.string.webclient_id))
+//                .requestEmail()
+//                .build()
+//            val signInClient = GoogleSignIn.getClient(this, options)
+//            signInClient.signInIntent.also {
+//                startActivityForResult(it, REQUEST_CODE_SIGN_IN)
+//            }
+//        }
     }
 
     @Deprecated("Deprecated in Java")
@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        val intent = Intent(this, HomeActivity::class.java)
+        val intent = Intent(this, HomeNavActivity::class.java)
         startActivity(intent)
         finish()
     }

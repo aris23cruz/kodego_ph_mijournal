@@ -20,6 +20,22 @@
     <string name="title_of_your_story">Title of your story</string>
     <string name="enter_your_story">Enter your story</string>
     <string name="date">Date</string>
+    <string name="add">add</string>
+    <string name="enter_your_title">Enter your title</string>
+    <string name="new_event">new event</string>
+    <string name="delete_event">delete event</string>
+    <string name="update_event">update event</string>
+    <string name="schedule">schedule</string>
+    <string name="enter_event_name_title">Enter event name/title</string>
+    <string name="enter_schedule">Enter schedule</string>
+    <string name="enter_date">Enter date</string>
+    <string name="update_calendar">update calendar</string>
+    <string name="calendar_picker">calendar picker</string>
+    <string name="add_notes">add notes</string>
+    <string name="notes_delete">notes delete</string>
+    <string name="enter_notes">Enter notes</string>
+    <string name="title">Title</string>
+    <string name="id">id</string>
 
 
 </resources>
